@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Discount Eligibility</title>
+  <script>
+    function checkDiscount() {
+      var age = document.getElementById("age").value;
+      var membership = document.getElementById("membership").value;
+      var purchaseAmount = document.getElementById("purchase-amount").value;
+      var couponCode = document.getElementById("coupon-code").value;
+
+      var output = document.getElementById("output");
+
+      if (age === "young" && membership === "yes" && purchaseAmount > 100 && couponCode === "valid") {
+        output.textContent = "Eligible for discount!";
+      } else if (age === "old" && membership === "yes" && purchaseAmount > 100 && couponCode === "valid") {
+        output.textContent = "Eligible for discount!";
+      } else if (age === "old" && membership === "yes" && purchaseAmount <= 100) {
+        output.textContent = "Eligible for discount!";
+      } else {
+        output.textContent = "Not eligible for discount.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Discount Eligibility</h1>
+
+  <label for="age">Age:</label>
+  <select id="age">
+    <option value="young">Young</option>
+    <option value="old">Old</option>
+  </select>
+
+  <label for="membership">Membership:</label>
+  <select id="membership">
+    <option value="yes">Yes</option>
+    <option value="no">No</option>
+  </select>
+
+  <label for="purchase-amount">Purchase Amount:</label>
+  <input type="number" id="purchase-amount" min="0" step="1">
+
+  <label for="coupon-code">Coupon Code:</label>
+  <select id="coupon-code">
+    <option value="valid">Valid</option>
+    <option value="invalid">Invalid</option>
+  </select>
+
+  <button onclick="checkDiscount()">Check Eligibility</button>
+
+  <div id="output"></div>
+</body>
+</html>

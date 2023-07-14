@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dropdown Example</title>
+  <script>
+    function writeSelection() {
+      var dropdown1 = document.getElementById("dropdown1");
+      var selectedValue1 = dropdown1.options[dropdown1.selectedIndex].value;
+
+      var dropdown2 = document.getElementById("dropdown2");
+      var selectedValue2 = dropdown2.options[dropdown2.selectedIndex].value;
+
+      var dropdown3 = document.getElementById("dropdown3");
+      var selectedValue3 = dropdown3.options[dropdown3.selectedIndex].value;
+
+      var output = "Selected values: " + selectedValue1 + ", " + selectedValue2 + ", " + selectedValue3;
+      document.getElementById("output").textContent = output;
+    }
+  </script>
+</head>
+<body>
+  <h1>Dropdown Example</h1>
+
+  <label for="dropdown1">Country:</label>
+  <select id="dropdown1">
+    <option value="value1">Bulgaria</option>
+    <option value="value2">Greece</option>
+    <option value="value3">Turkey</option>
+  </select>
+  <br />
+  <label for="dropdown2">Education</label>
+  <select id="dropdown2">
+    <option value="value4">No education</option>
+    <option value="value5">Miggle</option>
+    <option value="value6">High</option>
+  </select>
+  <br />
+  <label for="dropdown3">Gender</label>
+  <select id="dropdown3">
+    <option value="value7">Male</option>
+    <option value="value8">Female</option>
+    <option value="value9">Undefined</option>
+  </select>
+  <br /> <br /> <br />
+  <button onclick="writeSelection()">Write Selection</button>
+  <p id="output"></p>
+</body>
+</html>
