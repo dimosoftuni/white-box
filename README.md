@@ -1,3 +1,3 @@
-# unit-testing
+# white-box-testing
 
-Sample unit testing project with Mocha tests
+Sample project with mocha tests
