@@ -1,0 +1,11 @@
+{
+  "extends": "eslint-config-kinvey-platform",
+  "globals": {
+    "prompt": "readonly",
+    "alert": "readonly",
+    "document": "readonly"
+  },
+  "rules" : {
+    "no-alert": "off"
+  }
+}
